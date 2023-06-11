@@ -6,3 +6,5 @@ Simple tool for deleting script-related sections (`[Triggers]`, `[Events]`, `[Ta
 3. Launch `DeleteScriptsInAllMaps.bat`
 4. ???
 5. Profit!
+
+Powered by [Rampastring.Tools](https://github.com/Rampastring/Rampastring.Tools).
