@@ -13,22 +13,23 @@ namespace ScriptDeleter
         {
             IniFile map = new IniFile(args.First());
 
-            Console.WriteLine("Trying to open" + args.First());
-            Console.WriteLine("Deleting all key in [Triggers]");
+            Console.WriteLine("Trying to open [" + args.First() + "] map.");
+            Console.WriteLine("Deleting [Triggers]...");
             map.EraseSectionKeys("Triggers");
             map.RemoveSection("Triggers");
-            Console.WriteLine("Deleting all key in [Events]");
+            Console.WriteLine("Deleting [Events]...");
             map.EraseSectionKeys("Events");
             map.RemoveSection("Events");
-            Console.WriteLine("Deleting all key in [Tags]");
+            Console.WriteLine("Deleting [Tags]...");
             map.EraseSectionKeys("Tags");
             map.RemoveSection("Tags");
-            Console.WriteLine("Deleting all key in [Actions]");
+            Console.WriteLine("Deleting [Actions]...");
             map.EraseSectionKeys("Actions");
             map.RemoveSection("Actions");
-            Console.WriteLine("Deleting all key in [AITriggerTypesEnable]");
+            Console.WriteLine("Deleting [AITriggerTypesEnable]...");
             map.EraseSectionKeys("AITriggerTypesEnable");
             map.RemoveSection("AITriggerTypesEnable");
+            Console.WriteLine("All script-related sections in [" + args.First() + "] has been deleted.");
 
             map.WriteIniFile();
         }
